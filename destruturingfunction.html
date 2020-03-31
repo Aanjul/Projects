@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Destrucuring Functions</title>
+    </head>
+
+    <body>
+        <script>
+                function convertCurrency(amount){
+                    const converted  = {
+                    USD: amount * 0.76,
+                    GPB: amount * 0.53,
+                    AUD: amount * 1.01,
+                    MEX: amount * 13.30
+                    };
+                
+                return converted;
+                }
+
+                const hundo = 
+                convertCurrency(100);
+                console.log(hundo.AUD);
+                console.log(hundo.MEX);
+                console.log(hundo.GPB);
+                console.log(hundo.USD);
+
+                function tipCalc({total, tip = 0.15, tax= 0.13}) {
+                    return total + (tip * total) + (tax * total);
+                }
+
+                const bill = tipCalc({tip: 0.20, total: 200});
+                console.log(bill);
+
+         </script>
+    </body>
+</html>
+</HTML>

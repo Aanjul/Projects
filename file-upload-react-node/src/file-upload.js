@@ -30,6 +30,9 @@ export default class FileUploadComponent extends Component {
 
     render(){
         return(
+            <div className="container">
+            <h3> React File Upload </h3>
+            <hr/> 
             <div className="row" style={{marginTop:"40px"}}>
                 <div className="col-md-4 offset-md-4">
                     <form onSubmit={this.onSubmit}>
@@ -44,6 +47,7 @@ export default class FileUploadComponent extends Component {
                     </form>
                 </div>
             </div>
+         </div>
         )
     }
 }

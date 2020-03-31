@@ -15,15 +15,17 @@ class App extends React.Component {
 
 state = {lat: null, errorMessage:''};
 
+componentDidMount (){
 
-componentDidMount () {
+     console.log(" Component Did Mount ")
 
      window.navigator.geolocation.getCurrentPosition(
            position =>this.setState({lat: position.coords.latitude }),
            err =>this.setState({errorMessage: err.message})
+           
        );
 }
- 
+
 
     render (){
         
